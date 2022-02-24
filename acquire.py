@@ -3,6 +3,8 @@ import pandas as pd
 import env 
 import os
 
+
+# Can use global variables like below, or place them inside the function, as I did. 
 # url_titanic = f'mysql+pymysql://{env.user}:{env.password}@{env.host}/titanic_db'
 # url_iris = f'mysql+pymysql://{env.user}:{env.password}@{env.host}/iris_db'
 # url_telco = f'mysql+pymysql://{env.user}:{env.password}@{env.host}/telco_churn' 
@@ -19,7 +21,7 @@ Obtain your data from the Codeup Data Science Database.
 
 '''
 #%%
-def get_titanic_data():
+def get_titanic_data(use_cache=True):
     filename = 'titanic.csv'
     
     if os.path.exists(filename):
@@ -54,7 +56,7 @@ in addition to the species_ids.
 Obtain your data from the Codeup Data Science Database.
 '''
 #%%
-def get_iris_data():
+def get_iris_data(use_cache=True):
     filename = 'iris.csv'
     
     if os.path.exists(filename):
@@ -88,7 +90,7 @@ In your SQL, be sure to join all 4 tables together, so that
 the resulting dataframe contains all the contract, payment, and internet service options. Obtain your data from the Codeup Data Science Database.
 '''
 #%%
-def get_telco_data():
+def get_telco_data(use_cache=True):
     filename = 'telco_churn.csv'
     
     if os.path.exists(filename):
@@ -137,6 +139,11 @@ with the appropriate name.
 Make sure your env.py and csv files are not being pushed to GitHub!
 '''
 #%%
+
+# Done
+
+
+
 
 import os
 
