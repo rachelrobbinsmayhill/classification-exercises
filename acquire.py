@@ -66,8 +66,9 @@ def get_iris_data(use_cache=True):
     
     url = f'mysql+pymysql://{env.user}:{env.password}@{env.host}/iris_db'
     query = '''
-    SELECT * 
-        FROM species
+     SELECT *
+        FROM measurements
+        JOIN species USING (species_id)
         
     '''
 
@@ -78,7 +79,7 @@ def get_iris_data(use_cache=True):
     return df
 #%%
 get_iris_data()
-
+#%%
 
 
 
