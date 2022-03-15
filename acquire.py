@@ -20,7 +20,7 @@ as a pandas data frame.
 Obtain your data from the Codeup Data Science Database.
 
 '''
-#%%
+
 def get_titanic_data(use_cache=True):
     filename = 'titanic.csv'
     
@@ -40,9 +40,6 @@ def get_titanic_data(use_cache=True):
     print('Saving to csv...')
     df.to_csv(filename, index=False)
     return df
-#%%
-get_titanic_data()
-#%%
 
 
 
@@ -55,7 +52,7 @@ the actual name of the species
 in addition to the species_ids. 
 Obtain your data from the Codeup Data Science Database.
 '''
-#%%
+
 def get_iris_data(use_cache=True):
     filename = 'iris.csv'
     
@@ -77,9 +74,6 @@ def get_iris_data(use_cache=True):
     print('Saving to csv...')
     df.to_csv(filename, index=False)
     return df
-#%%
-get_iris_data()
-#%%
 
 
 
@@ -90,7 +84,7 @@ that returns the data from the telco_churn database in SQL.
 In your SQL, be sure to join all 4 tables together, so that 
 the resulting dataframe contains all the contract, payment, and internet service options. Obtain your data from the Codeup Data Science Database.
 '''
-#%%
+
 def get_telco_data(use_cache=True):
     filename = 'telco_churn.csv'
     
@@ -118,35 +112,8 @@ def get_telco_data(use_cache=True):
     print('Saving to csv...')
     df.to_csv(filename, index=False)
     return df
-#%%
-get_telco_data()
 
 
-
-
-
-'''
-4. Once you've got your get_titanic_data, get_iris_data, and get_telco_data functions 
-written, now it's time to add caching to them. 
-To do this, edit the beginning of the function 
-to check for the local filename of telco.csv, 
-titanic.csv, or iris.csv. 
-If they exist, use the .csv file. 
-
-If the file doesn't exist, then produce the SQL and pandas necessary 
-to create a dataframe, then write the dataframe to a .csv file 
-with the appropriate name.
-
-Make sure your env.py and csv files are not being pushed to GitHub!
-'''
-#%%
-
-# Done
-
-
-
-
-import os
 
 def get_number_data():
     filename = 'numbers.csv'
@@ -167,4 +134,3 @@ def get_number_data():
     print('Saving to csv...')
     df.to_csv(filename, index=False)
     return df
-# %%
